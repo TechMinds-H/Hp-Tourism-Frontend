@@ -18,11 +18,11 @@ export default function Admin() {
     const [selectedTab, setSelectedTab] = useState('all');
 
     useEffect(() => {
-        fetch('http://localhost:5000/api/admin/stats')
+        fetch('http://hp-tourism-backend.vercel.app/api/admin/stats')
             .then(res => res.json())
             .then(data => setStats(data));
 
-        fetch('http://localhost:5000/api/admin/bookings')
+        fetch('http://hp-tourism-backend.vercel.app/api/admin/bookings')
             .then(res => res.json())
             .then(data => setBookings(data));
     }, []);
