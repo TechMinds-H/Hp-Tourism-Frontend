@@ -2,8 +2,10 @@ import axios from "axios";
 
 
 const API = axios.create({
-    baseURL: import.meta.env.VITE_API_URL,
+  baseURL: "https://hp-tourism-backend.vercel.app/api",
 });
+
+console.log("API BASE URL:", "https://hp-tourism-backend.vercel.app/api");
 
 export const fetchDestinations = async () => {
   const { data } = await API.get("/destinations");
